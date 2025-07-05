@@ -1,0 +1,18 @@
+# Ignore Go and txt files in root (outside go-crud)
+*.go
+*.txt
+
+#But allow everything inside go-crud
+!go-crud/(*.go|*.txt) 
+# or !go-crud/
+!go-crud/** 
+
+# Ignore .env inside go-crud
+go-crud/.env 
+
+# Optional : Ignore IDE/editor/system files
+*.log
+*.swp
+*.DS_Store
+.idea/
+.vscode/
