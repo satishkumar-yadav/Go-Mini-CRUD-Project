@@ -1,10 +1,10 @@
-# Ignore Go and txt files in root (outside go-crud)
-*.go
-*.txt
+# Ignore Go and txt files only in root (outside go-crud)
+/*.go
+/*.txt
 
-#But allow everything inside go-crud
-!go-crud/(*.go|*.txt) 
-# or !go-crud/
+#But allow entire go-crud folder and its content
+# !go-crud/(*.go|*.txt)  // wrong 
+!go-crud/
 !go-crud/** 
 
 # Ignore .env inside go-crud
