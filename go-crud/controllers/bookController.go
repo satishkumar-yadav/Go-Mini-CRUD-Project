@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"strconv"
 
@@ -27,6 +28,7 @@ func GetBooks(w http.ResponseWriter, r *http.Request) {
 		books = append(books, b)
 	}
 	json.NewEncoder(w).Encode(books)
+	fmt.Println("Id : ", books[0], "Rating : ", books[3], "Title : ", books[1], "Author : ", books[2])
 }
 
 // POST /books

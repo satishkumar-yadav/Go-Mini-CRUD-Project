@@ -12,8 +12,9 @@ import (
 
 var DB *sql.DB
 
-func Connect() {
-	err := godotenv.Load()
+func ConnectMySql() {
+	// godotenv -	Load .env file into os.Getenv()
+	err := godotenv.Load() // godotenv.Load() - loads .env variables into environment
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
@@ -26,13 +27,13 @@ func Connect() {
 		os.Getenv("DB_PORT"),
 		os.Getenv("DB_NAME"),
 	)
-
-	database, err := sql.Open("mysql", dsn)
+	// driver name, dataSourceName
+	database, err := sql.Open("mysql", dsn) // sql.Open() prepares connection
 	if err != nil {
 		log.Fatal("Error connecting to database: ", err)
 	}
 
-	if err := database.Ping(); err != nil {
+	if err := database.Ping(); err != nil { // Ping() confirms DB is alive/responding
 		log.Fatal("Ping error: ", err)
 	}
 

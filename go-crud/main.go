@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	db.Connect()
+	db.ConnectMySql()
 
 	r := routes.SetupRoutes()
 

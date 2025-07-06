@@ -6,3 +6,5 @@ type Book struct {
 	Author string `json:"author"`
 	Rating int    `json:"rating"`
 }
+
+// ✅ This struct represents a row in the books table.

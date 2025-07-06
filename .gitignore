@@ -7,6 +7,8 @@
 !go-crud/
 !go-crud/** 
 
+
+
 # Ignore .env inside go-crud
 go-crud/.env 
 
